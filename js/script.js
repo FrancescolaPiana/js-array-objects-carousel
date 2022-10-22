@@ -28,3 +28,145 @@ const images = [
     },
 ];
 
+let z = 0;
+
+// bottone forward
+const forward = document.getElementById('forward')
+forward.addEventListener('click' , fx)
+
+// funzione forward
+function fx() {
+    z++;
+    if (z==5) {
+        z = 0;
+     }
+    if (z==0) {
+        let img0 = document.getElementById('0')
+         img0.className = "img-fluid rov d-flex"
+     }
+     else{
+         let img0 = document.getElementById('0')
+         img0.className = "img-fluid rov d-none"
+     }
+
+        if (z==1) {
+           let img1 = document.getElementById('1')
+            img1.className = "img-fluid rov d-flex"
+        }
+        else{
+            let img1 = document.getElementById('1')
+            img1.className = "img-fluid rov d-none"
+        }
+
+        if (z==2) {
+            let img2 = document.getElementById('2')
+             img2.className = "img-fluid rov d-flex"
+         }
+         else{
+            let img2 = document.getElementById('2')
+             img2.className = "img-fluid rov d-none"
+         }
+
+         if (z==3) {
+            let img3 = document.getElementById('3')
+             img3.className = "img-fluid rov d-flex"
+         }
+         else{
+            let img3 = document.getElementById('3')
+            img3.className = "img-fluid rov d-none"
+         }
+         if (z==4) {
+            let img4 = document.getElementById('4')
+             img4.className = "img-fluid rov d-flex"
+         }
+         else{
+            let img4 = document.getElementById('4')
+             img4.className = "img-fluid rov d-none"
+         }
+
+         
+         console.log(z);
+}
+
+// bottone back
+const back = document.getElementById('back')
+back.addEventListener('click' , fx2)
+
+// funzione back
+function fx2() {
+    z--;
+    if (z== -1) {
+        z = 4;
+     }
+    if (z==0) {
+        let img0 = document.getElementById('0')
+         img0.className = "img-fluid rov d-flex"
+     }
+     else{
+         let img0 = document.getElementById('0')
+         img0.className = "img-fluid rov d-none"
+     }
+
+        if (z==1) {
+           let img1 = document.getElementById('1')
+            img1.className = "img-fluid rov d-flex"
+        }
+        else{
+            let img1 = document.getElementById('1')
+            img1.className = "img-fluid rov d-none"
+        }
+
+        if (z==2) {
+            let img2 = document.getElementById('2')
+             img2.className = "img-fluid rov d-flex"
+         }
+         else{
+            let img2 = document.getElementById('2')
+             img2.className = "img-fluid rov d-none"
+         }
+
+         if (z==3) {
+            let img3 = document.getElementById('3')
+             img3.className = "img-fluid rov d-flex"
+         }
+         else{
+            let img3 = document.getElementById('3')
+            img3.className = "img-fluid rov d-none"
+         }
+         if (z==4) {
+            let img4 = document.getElementById('4')
+             img4.className = "img-fluid rov d-flex"
+         }
+         else{
+            let img4 = document.getElementById('4')
+             img4.className = "img-fluid rov d-none"
+         }
+
+         
+         console.log(z);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // images.forEach(element => {
+    //     console.log(element.title);
+    // });
