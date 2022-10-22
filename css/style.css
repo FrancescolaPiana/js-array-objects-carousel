@@ -1,0 +1,29 @@
+.mrgtop{
+    margin-top: 50px;
+}
+.rov{
+    border-radius: 5px;
+    width: calc(170px * 5);
+    height: 500px;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+.rovsml{
+    border-radius: 5px;
+    width: 170px;
+    height: 120px;
+    justify-content: center;
+    /* border: 2px solid rgb(225, 225, 225); */
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+.mod1{
+
+}
+.sa1s{
+    font-size: 90px;
+}
+
+.sa1s:hover{
+    cursor: pointer;
+    filter: brightness(1.8);
+}
