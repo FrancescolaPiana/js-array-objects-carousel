@@ -14,7 +14,8 @@
     height: 120px;
     justify-content: center;
     /* border: 2px solid rgb(225, 225, 225); */
-    border: 2px solid rgba(255, 255, 255, 0);
+    border: 3px solid rgba(255, 255, 255, 0);
+    filter: brightness(0.5);
 }
 .mod1{
 
@@ -26,4 +27,48 @@
 .sa1s:hover{
     cursor: pointer;
     filter: brightness(1.8);
+}
+
+.zzz{
+    color: aliceblue;
+    text-shadow: 3px 5px 4px black;
+    font-size: 50px;
+    top: 20px;
+    right: 38px;
+    z-index: 1000;
+    text-align: right;
+    /* background-color: black; */
+}
+
+.zz2{
+    color: aliceblue;
+    text-shadow: 3px 5px 4px black;
+
+    font-size: 20px;
+    width: 60%;
+    top: 82px;
+    right: 38px;
+    z-index: 1000;
+    text-align: right;
+    /* background-color: black; */
+}
+.lghty{
+    filter: brightness(1);
+    border: 3px solid rgb(168, 168, 168);
+}
+
+.box0{
+    /* display: none; */
+}
+.box1{
+    /* display: none; */
+}
+.box2{
+    /* display: none; */
+}
+.box3{
+    /* display: none; */
+}
+.box4{
+    /* display: none; */
 }

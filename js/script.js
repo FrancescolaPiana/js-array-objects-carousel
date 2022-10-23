@@ -28,11 +28,44 @@ const images = [
     },
 ];
 
+// funzione che genera le immagini grandi
+    let n = 0;
+
+for (const key in images) {
+    let maicol = document.getElementById('maicol');
+    let divcont = document.createElement('div');
+    divcont.setAttribute("id" , `box${n}`)
+    divcont.className = 'd-none';
+    
+    divcont.innerHTML = `
+    <h1 id="ti" class="position-absolute zzz" > ${images[key].title} </h1>
+    <h3 id="de" class="position-absolute zz2">${images[key].description}</h3>
+    <img id="${n}" class="img-fluid rov" src="${images[key].url}" alt="">
+    `
+    maicol.append(divcont)
+    n++
+}
+
+
+
 let z = 0;
 
 // bottone forward
 const forward = document.getElementById('forward')
 forward.addEventListener('click' , fx)
+
+
+
+  //  img0
+  if (z==0) { 
+    document.getElementById('box0').className = "d-block"
+    document.getElementById('0a').classList.add('lghty')
+ }
+ else{
+    document.getElementById('box0').className = "d-none"
+     document.getElementById('0a').classList.remove('lghty')
+ }
+
 
 // funzione forward
 function fx() {
@@ -40,51 +73,57 @@ function fx() {
     if (z==5) {
         z = 0;
      }
-    if (z==0) {
-        let img0 = document.getElementById('0')
-         img0.className = "img-fluid rov d-flex"
+    //  img0
+    if (z==0) { 
+        document.getElementById('box0').className = "d-block"
+        document.getElementById('0a').classList.add('lghty')
      }
      else{
-         let img0 = document.getElementById('0')
-         img0.className = "img-fluid rov d-none"
+        document.getElementById('box0').className = "d-none"
+         document.getElementById('0a').classList.remove('lghty')
      }
 
-        if (z==1) {
-           let img1 = document.getElementById('1')
-            img1.className = "img-fluid rov d-flex"
-        }
-        else{
-            let img1 = document.getElementById('1')
-            img1.className = "img-fluid rov d-none"
-        }
 
-        if (z==2) {
-            let img2 = document.getElementById('2')
-             img2.className = "img-fluid rov d-flex"
-         }
-         else{
-            let img2 = document.getElementById('2')
-             img2.className = "img-fluid rov d-none"
-         }
+       //  img1
+    if (z==1) { 
+        document.getElementById('box1').className = "d-block"
+        document.getElementById('1a').classList.add('lghty')
+     }
+     else{
+        document.getElementById('box1').className = "d-none"
+         document.getElementById('1a').classList.remove('lghty')
+     }
 
-         if (z==3) {
-            let img3 = document.getElementById('3')
-             img3.className = "img-fluid rov d-flex"
-         }
-         else{
-            let img3 = document.getElementById('3')
-            img3.className = "img-fluid rov d-none"
-         }
-         if (z==4) {
-            let img4 = document.getElementById('4')
-             img4.className = "img-fluid rov d-flex"
-         }
-         else{
-            let img4 = document.getElementById('4')
-             img4.className = "img-fluid rov d-none"
-         }
+        //  img2
+    if (z==2) { 
+        document.getElementById('box2').className = "d-block"
+        document.getElementById('2a').classList.add('lghty')
+     }
+     else{
+        document.getElementById('box2').className = "d-none"
+         document.getElementById('2a').classList.remove('lghty')
+     }
 
-         
+         //  img3
+    if (z==3) { 
+        document.getElementById('box3').className = "d-block"
+        document.getElementById('3a').classList.add('lghty')
+     }
+     else{
+        document.getElementById('box3').className = "d-none"
+         document.getElementById('3a').classList.remove('lghty')
+     }
+
+          //  img4
+    if (z==4) { 
+        document.getElementById('box4').className = "d-block"
+        document.getElementById('4a').classList.add('lghty')
+     }
+     else{
+        document.getElementById('box4').className = "d-none"
+         document.getElementById('4a').classList.remove('lghty')
+     }
+    
          console.log(z);
 }
 
@@ -98,54 +137,120 @@ function fx2() {
     if (z== -1) {
         z = 4;
      }
+
+    //  img0
     if (z==0) {
-        let img0 = document.getElementById('0')
-         img0.className = "img-fluid rov d-flex"
+        document.getElementById('box0').className = "d-block"
+         document.getElementById('0a').classList.add('lghty')
      }
      else{
-         let img0 = document.getElementById('0')
-         img0.className = "img-fluid rov d-none"
+        document.getElementById('box0').className = "d-none"
+         document.getElementById('0a').classList.remove('lghty')
      }
 
-        if (z==1) {
-           let img1 = document.getElementById('1')
-            img1.className = "img-fluid rov d-flex"
-        }
-        else{
-            let img1 = document.getElementById('1')
-            img1.className = "img-fluid rov d-none"
-        }
+    //  img1
+     if (z==1) {
+        document.getElementById('box1').className = "d-block"
+         document.getElementById('1a').classList.add('lghty')
+     }
+     else{
+        document.getElementById('box1').className = "d-none"
+         document.getElementById('1a').classList.remove('lghty')
+     }
+      //  img2
+      if (z==2) {
+        document.getElementById('box2').className = "d-block"
+         document.getElementById('2a').classList.add('lghty')
+     }
+     else{
+        document.getElementById('box2').className = "d-none"
+         document.getElementById('2a').classList.remove('lghty')
+     }
+      //  img3
+      if (z==3) {
+        document.getElementById('box3').className = "d-block"
+         document.getElementById('3a').classList.add('lghty')
+     }
+     else{
+        document.getElementById('box3').className = "d-none"
+         document.getElementById('3a').classList.remove('lghty')
+     }
+      //  img4
+      if (z==4) {
+        document.getElementById('box4').className = "d-block"
+         document.getElementById('4a').classList.add('lghty')
+     }
+     else{
+        document.getElementById('box4').className = "d-none"
+         document.getElementById('4a').classList.remove('lghty')
+     }
 
-        if (z==2) {
-            let img2 = document.getElementById('2')
-             img2.className = "img-fluid rov d-flex"
-         }
-         else{
-            let img2 = document.getElementById('2')
-             img2.className = "img-fluid rov d-none"
-         }
 
-         if (z==3) {
-            let img3 = document.getElementById('3')
-             img3.className = "img-fluid rov d-flex"
-         }
-         else{
-            let img3 = document.getElementById('3')
-            img3.className = "img-fluid rov d-none"
-         }
-         if (z==4) {
-            let img4 = document.getElementById('4')
-             img4.className = "img-fluid rov d-flex"
-         }
-         else{
-            let img4 = document.getElementById('4')
-             img4.className = "img-fluid rov d-none"
-         }
+
+
+
+        // if (z==1) {
+        //    let img1 = document.getElementById('1')
+        //     img1.className = "img-fluid rov d-flex"
+        //     document.getElementById('1a').classList.add('lghty')
+
+        // }
+        // else{
+        //     let img1 = document.getElementById('1')
+        //     img1.className = "img-fluid rov d-none"
+        //     document.getElementById('1a').classList.remove('lghty')
+
+        // }
+
+        // if (z==2) {
+        //     let img2 = document.getElementById('2')
+        //      img2.className = "img-fluid rov d-flex"
+        //      document.getElementById('2a').classList.add('lghty')
+
+        //  }
+        //  else{
+        //     let img2 = document.getElementById('2')
+        //      img2.className = "img-fluid rov d-none"
+        //      document.getElementById('2a').classList.remove('lghty')
+
+        //  }
+
+        //  if (z==3) {
+        //     let img3 = document.getElementById('3')
+        //      img3.className = "img-fluid rov d-flex"
+        //      document.getElementById('3a').classList.add('lghty')
+
+        //  }
+        //  else{
+        //     let img3 = document.getElementById('3')
+        //     img3.className = "img-fluid rov d-none"
+        //     document.getElementById('3a').classList.remove('lghty')
+
+        //  }
+        //  if (z==4) {
+        //     let img4 = document.getElementById('4')
+        //      img4.className = "img-fluid rov d-flex"
+        //      document.getElementById('4a').classList.add('lghty')
+
+        //  }
+        //  else{
+        //     let img4 = document.getElementById('4')
+        //      img4.className = "img-fluid rov d-none"
+        //      document.getElementById('4a').classList.remove('lghty')
+
+        //  }
 
          
          console.log(z);
 }
 
+//  images.forEach(element => {
+//         document
+        
+
+
+
+//     });
 
 
 
@@ -166,7 +271,6 @@ function fx2() {
 
 
 
+   
 
-    // images.forEach(element => {
-    //     console.log(element.title);
-    // });
+    // document.getElementById('0').src="url"
