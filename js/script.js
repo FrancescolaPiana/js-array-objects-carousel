@@ -28,6 +28,7 @@ const images = [
     },
 ];
 
+
 // funzione che genera le immagini grandi
     let n = 0;
 
@@ -46,15 +47,23 @@ for (const key in images) {
     n++
 }
 
+crt()
+// funzione creazione miniature
 
+function crt() {
+    const app = document.getElementById('app')
+    images.forEach((value,index)=>{
+        let slide = document.createElement('div')
+        slide.className = "reef"
+        slide.innerHTML = `<img id="${index}a" class="img-fluid rovsml" src="${value.url}" alt="">`
+        app.append(slide)
+    })
+}
 
-let z = 0;
-
+z = 0;
 // bottone forward
 const forward = document.getElementById('forward')
 forward.addEventListener('click' , fx)
-
-
 
   //  img0
   if (z==0) { 
@@ -65,7 +74,6 @@ forward.addEventListener('click' , fx)
     document.getElementById('box0').className = "d-none"
      document.getElementById('0a').classList.remove('lghty')
  }
-
 
 // funzione forward
 function fx() {
@@ -123,9 +131,55 @@ function fx() {
         document.getElementById('box4').className = "d-none"
          document.getElementById('4a').classList.remove('lghty')
      }
-    
-         console.log(z);
+    // onclick
+
+const link0 = document.getElementById('0a')
+link0.addEventListener('click' , fs0)
+
+const link1 = document.getElementById('1a')
+link1.addEventListener('click' , fs1)
+
+const link2 = document.getElementById('2a')
+link2.addEventListener('click' , fs2)
+
+const link3 = document.getElementById('3a')
+link3.addEventListener('click' , fs3)
+
+const link4 = document.getElementById('4a')
+link4.addEventListener('click' , fs4)
+
+function fs0() {
+    z = -1;
+    console.log(z);
+
 }
+function fs1() {
+    z = 0;
+    console.log(z);
+}
+function fs2() {
+    z = 1;
+    console.log(z);
+}
+function fs3() {
+    z = 2;
+    console.log(z);
+}
+function fs4() {
+    z = 3;
+    console.log(z);
+}
+
+        //  console.log(z);
+}
+
+
+
+
+
+
+
+
 
 // bottone back
 const back = document.getElementById('back')
@@ -185,72 +239,48 @@ function fx2() {
          document.getElementById('4a').classList.remove('lghty')
      }
 
+       // onclick
 
+const link0 = document.getElementById('0a')
+link0.addEventListener('click' , fs0)
 
+const link1 = document.getElementById('1a')
+link1.addEventListener('click' , fs1)
 
+const link2 = document.getElementById('2a')
+link2.addEventListener('click' , fs2)
 
-        // if (z==1) {
-        //    let img1 = document.getElementById('1')
-        //     img1.className = "img-fluid rov d-flex"
-        //     document.getElementById('1a').classList.add('lghty')
+const link3 = document.getElementById('3a')
+link3.addEventListener('click' , fs3)
 
-        // }
-        // else{
-        //     let img1 = document.getElementById('1')
-        //     img1.className = "img-fluid rov d-none"
-        //     document.getElementById('1a').classList.remove('lghty')
+const link4 = document.getElementById('4a')
+link4.addEventListener('click' , fs4)
 
-        // }
+function fs0() {
+    z = 1;
+    console.log(z);
 
-        // if (z==2) {
-        //     let img2 = document.getElementById('2')
-        //      img2.className = "img-fluid rov d-flex"
-        //      document.getElementById('2a').classList.add('lghty')
-
-        //  }
-        //  else{
-        //     let img2 = document.getElementById('2')
-        //      img2.className = "img-fluid rov d-none"
-        //      document.getElementById('2a').classList.remove('lghty')
-
-        //  }
-
-        //  if (z==3) {
-        //     let img3 = document.getElementById('3')
-        //      img3.className = "img-fluid rov d-flex"
-        //      document.getElementById('3a').classList.add('lghty')
-
-        //  }
-        //  else{
-        //     let img3 = document.getElementById('3')
-        //     img3.className = "img-fluid rov d-none"
-        //     document.getElementById('3a').classList.remove('lghty')
-
-        //  }
-        //  if (z==4) {
-        //     let img4 = document.getElementById('4')
-        //      img4.className = "img-fluid rov d-flex"
-        //      document.getElementById('4a').classList.add('lghty')
-
-        //  }
-        //  else{
-        //     let img4 = document.getElementById('4')
-        //      img4.className = "img-fluid rov d-none"
-        //      document.getElementById('4a').classList.remove('lghty')
-
-        //  }
-
-         
-         console.log(z);
+}
+function fs1() {
+    z = 2;
+    console.log(z);
+}
+function fs2() {
+    z = 3;
+    console.log(z);
+}
+function fs3() {
+    z = 4;
+    console.log(z);
+}
+function fs4() {
+    z = 5;
+    console.log(z);
+}
+  
+        //  console.log(z);
 }
 
-//  images.forEach(element => {
-//         document
-        
-
-
-
-//     });
 
 
 
@@ -258,8 +288,61 @@ function fx2() {
 
 
 
+// funzione play anb pause
 
 
+// default
+fn();
+function fn() {
+    intervalIdfor = setInterval(fx, 2000);
+}
+
+// pause
+let pause = document.getElementById('stop')
+pause.addEventListener('click' , fn2 )
+function fn2() {
+    clearInterval(intervalIdfor)
+    document.getElementById('play').classList.remove("d-none")
+    document.getElementById('stop').classList.add("d-none")
+}
+
+
+
+
+
+// invert revert
+
+
+// play
+
+let play = document.getElementById('play')
+play.addEventListener('click' , fn3 )
+function fn3() {
+    fn()
+    document.getElementById('play').classList.add("d-none")
+    document.getElementById('stop').classList.remove("d-none")
+}
+
+
+// funzione invert
+let invert = document.getElementById('invert')
+invert.addEventListener('click' , fn4 )
+function fn4() {
+    clearInterval(intervalIdfor)
+    intervalIdback = setInterval(fx2, 2000);
+    document.getElementById('invert1').classList.remove("d-none")
+    document.getElementById('invert').classList.add("d-none")
+}
+
+// funzione revert
+let invert1 = document.getElementById('invert1')
+invert1.addEventListener('click' , fn5 )
+function fn5() {
+    clearInterval(intervalIdback)
+    intervalIdfor = setInterval(fx, 2000);
+    document.getElementById('invert1').classList.add("d-none")
+    document.getElementById('invert').classList.remove("d-none")
+}
 
 
 
@@ -273,4 +356,3 @@ function fx2() {
 
    
 
-    // document.getElementById('0').src="url"

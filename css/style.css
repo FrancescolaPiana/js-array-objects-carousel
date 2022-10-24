@@ -15,7 +15,7 @@
     justify-content: center;
     /* border: 2px solid rgb(225, 225, 225); */
     border: 3px solid rgba(255, 255, 255, 0);
-    filter: brightness(0.5);
+    filter: brightness(0.35);
 }
 .mod1{
 
@@ -57,18 +57,22 @@
     border: 3px solid rgb(168, 168, 168);
 }
 
-.box0{
-    /* display: none; */
+.grn{
+    color: cadetblue;
 }
-.box1{
-    /* display: none; */
+
+#box0{
+
 }
-.box2{
-    /* display: none; */
+#box1{
 }
-.box3{
-    /* display: none; */
+#box2{
 }
-.box4{
-    /* display: none; */
+#box3{
+}
+#box4{
+}
+
+.reef:hover{
+    cursor: pointer;
 }
